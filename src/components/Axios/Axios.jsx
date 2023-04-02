@@ -5,7 +5,20 @@ const Axios = () => {
     const [phoneData,setPhoneData] = useState([])
     useEffect(()=> {
         axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
-        .then(data => console.log(data.data.data))
+        .then(data => {
+            const loadedData = data.data.data ;
+            const phoneData = loadedData.map(phone =>{
+                const partPhone = phone.slug.split('-');
+                const price = parseInt(partPhone[1]);
+                const phoneInfo = {
+                    name : phone.phone_name,
+                    price : price
+                }
+                return phoneInfo ;
+            })
+
+            console.log(phoneData);
+        })
     },[])
 
     return (
