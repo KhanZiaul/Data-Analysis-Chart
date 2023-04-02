@@ -4,10 +4,10 @@ import Navigation from '../Navigation/Navigation';
 const Header = () => {
     return (
         <div>
-            <h2 className='text-center text-7xl mt-3 text-sky-500 mb-3'>Price Option</h2>
-            <nav>
+            <nav className='mt-5'>
                 <Navigation></Navigation>
             </nav>
+            <h2 className='text-center text-7xl mt-2 text-sky-500'>Price Option</h2>
         </div>
     );
 };
