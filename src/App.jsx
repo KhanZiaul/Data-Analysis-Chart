@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Header from './components/Header/Header'
 const App = () => {
   return (
     <div>
-      <h2 className='text-5xl'>welcome</h2>
+      <Header></Header>
     </div>
   );
 };
